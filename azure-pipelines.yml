@@ -12,6 +12,7 @@ pool:
 
 steps:
 
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -21,16 +22,10 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    #sonarQubeRunAnalysis: true
-    sqMavenPluginVersionChoice: 'latest'
-    goals: 'package'
+    sonarQubeRunAnalysis: false
 
 
-
-
-
-- task: PublishPipelineArtifact@0
-  displayName: 'Publish pipeline artifact'
+- task: MavenAuthenticate@0
   inputs:
-    artifactName: 'drop'
-    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifactsFeeds: 'jagadeeshparanji'
+    mavenServiceConnections: 'maven'
