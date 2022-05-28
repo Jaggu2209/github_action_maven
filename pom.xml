@@ -20,7 +20,7 @@
 </repository>
     </distributionManagement>
  <repositories>
- 
+ <repository>
  <id>jagadeeshparanji</id>
   <url>https://pkgs.dev.azure.com/jagadeeshparanji/_packaging/jagadeeshparanji/maven/v1</url>
   <releases>
@@ -29,6 +29,7 @@
   <snapshots>
     <enabled>true</enabled>
   </snapshots>
+          </repository>
 </repositories>
     <build>
         <plugins>
