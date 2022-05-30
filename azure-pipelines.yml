@@ -17,5 +17,5 @@ steps:
     inputs:
       script: |
         whoami
-        
+        mvn clean deploy
         pwd
